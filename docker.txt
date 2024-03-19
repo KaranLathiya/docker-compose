@@ -1,0 +1,37 @@
+
+https://medium.com/kanoteknologi/dockerized-your-golang-application-37e9067ad6ddcreate 
+
+Dockerfile
+
+add all the required fields
+for creating image 
+
+
+IMAGES
+Docker images are a lightweight, standalone, executable package
+of software that includes everything needed to run an application:
+code, runtime, system tools, system libraries and settings.
+
+CONTAINERS
+A container is a runtime instance of a docker image. A container
+will always run the same, regardless of the infrastructure.
+Containers isolate software from its environment and ensure
+that it works uniformly despite differences for instance between
+development and staging.
+
+
+docker build -t imagename .
+
+docker ps         // for container that are running -a flag for all (that also deleted)
+docker images     // for all the images
+
+
+docker run -d -p 8080:8080 go_docker         //docker run -p <host_port>:<container_port> <image_name>
+if we dont specify expose in Dockerfile then need to use -p  (port flag)
+-d flag for running in background
+
+docker stop container_id
+ 
+docker system prune  //for remove stopped containers
+
+docker rm -f container-name or id   // f flag for forcefully remove
